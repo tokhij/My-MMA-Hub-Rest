@@ -9,13 +9,13 @@ import java.util.Date;
 @Entity(name = "youtube_video_info")
 @Data
 @EqualsAndHashCode(callSuper=true)
-public class YouTubeVideoInfo extends BaseEntity {
-
-    @Column(name = "video_id")
-    private String videoId;
+public class YouTubeVideo extends BaseEntity {
 
     @Column(name = "title")
     private String title;
+
+    @Column(name = "url")
+    private String url;
 
     @Column(name = "thumbnail_url")
     private String thumbnailUrl;
@@ -24,25 +24,7 @@ public class YouTubeVideoInfo extends BaseEntity {
     private String description;
 
     @Column(name = "published_date")
-    private Date publishedDate;
-
-    @Column(name = "definition")
-    private String videoDefinition;
-
-    @Column(name = "duration")
-    private String videoDuration;
-
-    @Column(name = "caption")
-    private String videoCaption;
-
-    @Column(name = "projection")
-    private String videoProjection;
-
-    @Column(name = "country_restricted")
-    private String countryRestricted;
-
-    @Column(name = "keyword")
-    private String keyword;
+    private String publishedDate;
 
     @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "channel_id", referencedColumnName = "channel_id")

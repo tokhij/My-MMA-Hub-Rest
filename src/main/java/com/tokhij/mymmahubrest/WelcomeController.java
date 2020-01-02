@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 @EnableAutoConfiguration
-public class HelloWorldController {
+public class WelcomeController {
     @RequestMapping
     @ResponseBody
     public String sayHello(){
