@@ -4,9 +4,8 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 
 import javax.persistence.*;
-import java.util.Date;
 
-@Entity(name = "youtube_video_info")
+@Entity(name = "youtube_video")
 @Data
 @EqualsAndHashCode(callSuper=true)
 public class YouTubeVideo extends BaseEntity {

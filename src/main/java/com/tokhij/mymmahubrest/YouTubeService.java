@@ -93,13 +93,13 @@ public class YouTubeService {
      */
     private YouTube getYouTube() {
         YouTube youtube = new YouTube.Builder(new NetHttpTransport(), new JacksonFactory(),
-                (request) -> {}).setApplicationName("youtube-spring-boot-demo").build();
+                (request) -> {}).setApplicationName("My-MMA-Hub").build();
 
         return youtube;
     }
 
 
     public static void main(String[] args) {
-        new YouTubeService().fetchVideosByQuery("bill maher");
+        new YouTubeService().fetchVideosByQuery("boxing");
     }
 }
